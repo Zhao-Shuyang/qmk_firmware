@@ -59,13 +59,13 @@
 #define NO_AT	ALGR(KC_2)
 #define NO_PND	ALGR(KC_3)
 #define NO_DLR	ALGR(KC_4)
+#define NO_EURO	ALGR(KC_5)
 #define NO_LCBR ALGR(KC_7)
 #define NO_LBRC ALGR(KC_8)
 #define NO_RBRC ALGR(KC_9)
 #define NO_RCBR	ALGR(KC_0)
 #define NO_PIPE ALGR(KC_NUBS)
 
-#define NO_EURO ALGR(KC_E)
 #define NO_TILD ALGR(NO_QUOT)
 
 #define NO_BSLS ALGR(KC_MINS)
