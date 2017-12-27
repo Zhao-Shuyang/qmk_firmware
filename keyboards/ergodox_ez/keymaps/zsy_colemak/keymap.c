@@ -29,19 +29,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | ESC    |  !   |  "   |  #   |  #   |  %   | &    |           | ^    |  /   |  (   |  )   |  =   |  ?   |   Back |
- * |        |  1   |  2 @ |  3 £ |  4 $ |  5 € | 6    |           | ¨ ~  |  7 { |  8 [ |  9 ] |  0 } |  + \ |   Space|
+ * | ESC    |  !   |  "   |  #   |  #   |  %   | &    |           |Prt   |  /   |  (   |  )   |  =   |  ?   |  _     |
+ * |        |  1   |  2 @ |  3 £ |  4 $ |  5 € | 6    |           |Scr   |  7 { |  8 [ |  9 ] |  0 } |  + \ |  - –   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Tab    | Q    | W    | F    | P    | G    | TG   |           |  TG  | J    | L    | U    | Y    | ' *  | PrtScn |
+ * | Tab    | Q    | W    | F    | P    | G    |  TG  |           |  TG  | J    | L    | U    | Y    | ^    | `      |
+ * |        |      |      |      |      |      |      |           |      |      |      |      |      | ¨ ~  | ´ ¸    |
  * |--------+------+------+------+------+------| (L2) |           | (L1) |------+------+------+------+------+--------|
- * | LShift | A    | R    | S    | T    | D    |------|           |------| H    |  N   | E    | I    | O    | RShift |
- * |        |      |      |      | LT(2)|      |      |           |      |      | LT(1)|      |      |      |        |
- * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
- * | LCrtl  | Z    | X    | C    | V    | B    |      |           |      | K    | M    | ;    | :    |  Up  | Rcrtl  |
+ * | Lang   | A    | R    | S    | T    | D    |------|           |------| H    |  N   | E    | I    | O    | *      |
+ * |        |      |      |      | LT(2)|      |      |           |      |      | LT(1)|      |      |      | ' ˇ    |
+ * |--------+------+------+------+------+------| Hyper|           | RCTRL|------+------+------+------+------+--------|
+ * | LShift | Z    | X    | C    | V    | B    |      |           |      | K    | M    | ;    | :    |  Up  | RShift |
  * |        |      |      |      |      |      |      |           |      |      |      | ,    | .    |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | Lang | >    | `    | LGUI | LAlt |                                       | AltGr| _    | Left | Down | Right|
- *   |      | < |  | ´  ¸ |      |      |                                       |      | -    |      |      |      |
+ *   | LCRTL| >    | LGUI | LGUI | LAlt |                                       | AltGr| _    | Left | Down | Right|
+ *   |      | < |  |      |      |      |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,--------------.
  *                                        |  WB  | WF   |       | Home |  End  |
@@ -56,19 +57,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // left hand
     KC_ESC,          KC_1,     KC_2,     KC_3,    KC_4,    KC_5,   KC_6,
     KC_TAB,          KC_Q,     KC_W,     KC_F,    KC_P,    KC_G,   TT(MOUSE),
-    KC_LSFT,        KC_A,     KC_R,     KC_S,    LT(MOUSE, KC_T),    KC_D,
-    KC_LCTRL,         KC_Z,     KC_X,     KC_C,    KC_V,    KC_B,   KC_HYPR,
-    LCTL(KC_SPC),        NO_LESS,  NO_ACUT,  KC_LGUI, KC_LALT, 
+    LCTL(KC_SPC),    KC_A,     KC_R,     KC_S,    LT(MOUSE, KC_T),    KC_D,
+    KC_LSFT,         KC_Z,     KC_X,     KC_C,    KC_V,    KC_B,   KC_HYPR,
+    KC_LCTRL,        NO_LESS,  KC_LGUI, KC_LGUI, KC_LALT, 
     KC_WBAK,  KC_WFWD,
     KC_INSERT,
     KC_SPC, KC_DEL, KC_UNDO,
 
     // right hand
-    NO_QUOT, KC_7,   KC_8,    KC_9,    KC_0,    NO_PLUS,  KC_BSPC,
-    TT(FN),   KC_J,   KC_L,    KC_U,    KC_Y,    NO_APOS,     KC_PSCREEN,
-              KC_H,   LT(FN, KC_N),    KC_E,    KC_I,    KC_O,  KC_RSFT,
-    KC_MEH, KC_K,   KC_M,    KC_COMM, KC_DOT,  KC_UP,    KC_RCTRL,
-                       NO_ALGR, NO_MINS, KC_LEFT, KC_DOWN,  KC_RGHT,
+    KC_PSCREEN, KC_7,   KC_8,    KC_9,    KC_0,    NO_PLUS,  NO_MINS,
+    TT(FN),   KC_J,   KC_L,    KC_U,    KC_Y,    NO_QUOT,     NO_ACUT,
+              KC_H,   LT(FN, KC_N),    KC_E,    KC_I,    KC_O,  NO_APOS,
+    KC_RCTRL, KC_K,   KC_M,    KC_COMM, KC_DOT,  KC_UP,    KC_RSFT,
+                      NO_ALGR, KC_UNDERSCORE, KC_LEFT, KC_DOWN,  KC_RGHT,
     KC_HOME,   KC_END, 
     KC_PGUP,
     KC_PGDN,   KC_ENTER, KC_BSPC
