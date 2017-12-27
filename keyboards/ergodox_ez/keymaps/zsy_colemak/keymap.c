@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 |      |      | Undo |       | PgDn |       |Space |
  *                                 `--------------------'       `---------------------'
  */
-
+  
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
     // left hand
     KC_ESC,          KC_1,     KC_2,     KC_3,    KC_4,    KC_5,   KC_6,
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TT(FN),   KC_J,   KC_L,    KC_U,    KC_Y,    NO_QUOT,     NO_ACUT,
               KC_H,   LT(FN, KC_N),    KC_E,    KC_I,    KC_O,  NO_APOS,
     KC_RCTRL, KC_K,   KC_M,    KC_COMM, KC_DOT,  KC_UP,    KC_RSFT,
-                      NO_ALGR, KC_UNDERSCORE, KC_LEFT, KC_DOWN,  KC_RGHT,
+                      NO_ALGR, NO_MINS, KC_LEFT, KC_DOWN,  KC_RGHT,
     KC_HOME,   KC_END, 
     KC_PGUP,
     KC_PGDN,   KC_ENTER, KC_BSPC
