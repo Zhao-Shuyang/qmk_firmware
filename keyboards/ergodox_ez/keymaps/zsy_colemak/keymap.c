@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |        |      |      |      | LT(2)|      |      |           |      |      | LT(1)|      |      |      | ' ˇ    |
  * |--------+------+------+------+------+------| Hyper|           | RCTRL|------+------+------+------+------+--------|
  * | LShift | Z    | X    | C    | V    | B    |      |           |      | K    | M    | ;    | :    |  Up  | RShift |
- * |        |      |      |      |      |      |      |           |      |      |      | ,    | .    |      |        |
+ * |        |      |      |      | CTRL |      |      |           |      |      | CTRL | ,    | .    |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | LCRTL| >    | LGUI | LGUI | LAlt |                                       | AltGr| _    | Left | Down | Right|
  *   |      | < |  |      |      |      |                                       |      | -    |      |      |      |
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,          KC_1,     KC_2,     KC_3,    KC_4,    KC_5,   KC_6,
     KC_TAB,          KC_Q,     KC_W,     KC_F,    KC_P,    KC_G,   TT(MOUSE),
     KC_LSFT,    KC_A,     KC_R,     KC_S,    LT(MOUSE, KC_T),    KC_D,
-    KC_LSFT,         KC_Z,     KC_X,     KC_C,    KC_V,    KC_B,   KC_HYPR,
+    KC_LSFT,         KC_Z,     KC_X,     KC_C,    CTL_T(KC_V),    KC_B,   KC_HYPR,
     KC_LCTRL,        NO_LESS,  KC_LGUI, KC_LGUI, KC_LALT, 
     KC_WBAK,  KC_WFWD,
     KC_INSERT,
@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCTL(KC_X), KC_7,   KC_8,    KC_9,    KC_0,    NO_PLUS,  NO_MINS,
     TT(FN),   KC_J,   KC_L,    KC_U,    KC_Y,    NO_QUOT,     NO_ACUT,
               KC_H,   LT(FN, KC_N),    KC_E,    KC_I,    KC_O,  NO_APOS,
-    KC_RCTRL, KC_K,   KC_M,    KC_COMM, KC_DOT,  KC_UP,    KC_RSFT,
+    KC_RCTRL, KC_K,   CTL_T(KC_M),    KC_COMM, KC_DOT,  KC_UP,    KC_RSFT,
                       NO_ALGR, NO_MINS, KC_LEFT, KC_DOWN,  KC_RGHT,
     KC_HOME,   KC_END, 
     KC_PGUP,
