@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------| (L2) |           | (L1) |------+------+------+------+------+--------|
  * | LShift | A    | R    | S    | T    | D    |------|           |------| H    |  N   | E    | I    | O    | *      |
  * |        |      |      |      | LT(2)|      |      |           |      |      | LT(1)|      |      |      | ' ˇ    |
- * |--------+------+------+------+------+------| Hyper|           | RCTRL|------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
  * | LShift | Z    | X    | C    | V    | B    |      |           |      | K    | M    | ;    | :    |  Up  | RShift |
  * |        |      |      |      | CTRL |      |      |           |      |      | CTRL | ,    | .    |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -67,8 +67,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // right hand
     LCTL(KC_X), KC_7,   KC_8,    KC_9,    KC_0,    NO_PLUS,  NO_MINS,
     TT(FN),   KC_J,   KC_L,    KC_U,    KC_Y,    NO_QUOT,     NO_ACUT,
-              KC_H,   LT(FN, KC_N),    KC_E,    KC_I,    KC_O,  NO_APOS,
-    KC_RCTRL, KC_K,   CTL_T(KC_M),    KC_COMM, KC_DOT,  KC_UP,    KC_RSFT,
+        KC_H,   LT(FN, KC_N),    KC_E,    KC_I,    KC_O,  SFT_T(NO_APOS),
+    KC_MEH, KC_K,   CTL_T(KC_M),    KC_COMM, KC_DOT,  KC_UP,    KC_RSFT,
                       NO_ALGR, NO_MINS, KC_LEFT, KC_DOWN,  KC_RGHT,
     KC_HOME,   KC_END, 
     KC_PGUP,
