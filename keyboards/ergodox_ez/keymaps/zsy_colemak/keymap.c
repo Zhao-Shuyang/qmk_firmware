@@ -1,4 +1,4 @@
-/* Copyright 2017 Zhao Shuyang
+t/* Copyright 2017 Zhao Shuyang
  *
  ** This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,          KC_Q,     KC_W,     KC_F,    KC_P,    KC_G,   TT(MV),
     KC_LSFT,    KC_A,     KC_R,     KC_S,    LT(MV, KC_T),    KC_D,
     SFT_T(NO_LESS),  KC_Z,     KC_X,     KC_C,    KC_V,    KC_B,   KC_HYPR,
-    KC_LCTRL, KC_LCTRL, KC_LEFT, KC_RIGHT, KC_LALT, 
+    KC_LCTRL, KC_LCTRL, KC_UP, KC_LEFT, KC_LALT, 
     KC_WBAK,  KC_WFWD,
     KC_PSCREEN,
     KC_SPC, KC_DEL, KC_UNDO,
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TT(NUM),   KC_J,   KC_L,    KC_U,    KC_Y,    NO_QUOT,     NO_ACUT,
         KC_H,   LT(MV, KC_N),    KC_E,    KC_I,    KC_O,  SFT_T(NO_APOS),
     KC_MEH, KC_K,   KC_M,    KC_COMM, KC_DOT,  NO_MINS,    KC_RSFT,
-                      NO_ALGR,  KC_UP, KC_DOWN,  KC_RCTRL, KC_RCTRL,
+                      NO_ALGR,  KC_RIGHT, KC_DOWN,  KC_RCTRL, KC_RCTRL,
     KC_HOME,   KC_END, 
     KC_PGUP,
     KC_PGDN,   KC_ENTER, KC_BSPC
