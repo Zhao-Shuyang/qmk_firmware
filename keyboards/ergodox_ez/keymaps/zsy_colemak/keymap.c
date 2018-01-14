@@ -116,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // right hand
     KC_PSCREEN, KC_7,   KC_8,    KC_9,    KC_0,    NO_PLUS,  NO_MINS,
-    TT(NUM),   KC_Y,   KC_U,    KC_I,    KC_O,  KC_P,   NO_QUOT,
+    TO(NUM),   KC_Y,   KC_U,    KC_I,    KC_O,  KC_P,   NO_QUOT,
         KC_H,   LT(MV, KC_J),    KC_K,    KC_L,   NO_APOS,     KC_RSFT,
     KC_LGUI, KC_N,   KC_M,    KC_COMM, KC_DOT,  NO_MINS,  SFT_T(NO_ACUT),
                       NO_ALGR,  KC_DOWN, KC_UP,   KC_RCTRL, KC_RCTRL,
