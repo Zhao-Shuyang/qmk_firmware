@@ -66,7 +66,7 @@ u *                                        |  WB  | WF   |       | Home |  End  
     KC_SPC, KC_DEL, KC_UNDO,
 
     // right hand
-    RGB_TOG, KC_7,   KC_8,    KC_9,    KC_0,    NO_PLUS,  KC_PSCREEN,
+    KC_PSCREEN, KC_7,   KC_8,    KC_9,    KC_0,    NO_PLUS,  KC_PSCREEN,
     TO(NUM),   KC_J,   KC_L,    KC_U,    KC_Y,     NO_QUOT,  NO_ACUT,
         KC_H,   LT(MV, KC_N),    KC_E,    KC_I,    KC_O,     KC_RSFT,
     KC_LGUI, KC_K,   KC_M,    KC_COMM, KC_DOT,     NO_MINS,  SFT_T(NO_APOS),
@@ -191,27 +191,27 @@ u *                                        |  WB  | WF   |       | Home |  End  
  *                                 `--------------------'       `--------------------'
  */
 
-
 [NUM] = LAYOUT_ergodox(
-       KC_TRNS, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_UP, KC_PGUP, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_PGDN, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                            KC_TRNS, KC_TRNS,
                                                     KC_TRNS,
                                   KC_TRNS, KC_TRNS, KC_TRNS,
     // right hand
-       KC_TRNS,  KC_7, KC_8, KC_9, KC_PSLS, KC_PEQL, KC_TRNS,
-       TO(BASE), KC_4, KC_5, KC_6, KC_PAST, KC_TRNS, KC_TRNS,
-                 KC_1, KC_2, KC_3, KC_PMNS, KC_TRNS, KC_TRNS,
-       KC_TRNS,  KC_0, KC_COMM, KC_DOT, KC_PPLS, KC_PEQL, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS,  KC_TRNS, KC_PEQL, KC_PSLS, KC_PAST, NO_MINS, KC_TRNS,
+       TO(BASE), KC_TRNS, KC_7, KC_8, KC_9, KC_PLUS, KC_TRNS,
+                 KC_TRNS, KC_4, KC_5, KC_6, KC_COMMA, KC_TRNS,
+       KC_TRNS,  KC_TRNS, KC_1, KC_2, KC_3, KC_DOT, KC_TRNS,
+       KC_0, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS, 
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS       
 ),
 };
+
 
 
 // Runs just one time when the keyboard initializes.
@@ -231,22 +231,21 @@ void matrix_scan_user(void) {
     ergodox_right_led_3_off();
     switch (layer) {
         case 1:
-	  //ergodox_right_led_2_on();
-	  rgblight_setrgb(0, 200, 0); 
+	  ergodox_right_led_2_on();
 	  break;
         case 2:
-	  //ergodox_right_led_1_on();
-	  rgblight_setrgb(200, 0, 0); 
+	  ergodox_right_led_1_on();
+	 
 	  break;
         case 3:
-	  //ergodox_right_led_3_on();
-	  rgblight_setrgb(0, 0, 200); 
+	  ergodox_right_led_3_on();
+	  
 	  break;
         default:
-	  rgblight_setrgb(200, 200, 200);
+	  
 	  break;
     }
-    
+    /*
     if (keyboard_report->mods & (MOD_BIT(KC_LCTL)|MOD_BIT(KC_RCTRL))) {
       ergodox_right_led_1_on();
     }
@@ -256,4 +255,5 @@ void matrix_scan_user(void) {
     if (keyboard_report->mods & (MOD_BIT(KC_LSFT)|MOD_BIT(KC_RSFT))) {
       ergodox_right_led_3_on();
     }
+    */
 };
