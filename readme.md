@@ -6,4 +6,7 @@ QMK Firmware with a zsy-colemak layout
 
 ## Ergodox-EZ zsy-colemak layout
 check keyboards/ergodox-ez/keymaps/zsy-colemak/keymap.c
-![alt text](http://zsy.fi/static/keyboard-layout.png)
+![alt text](http://zsy.fi/static/zsy-base.png)
+![alt text](http://zsy.fi/static/zsy-movement.png)
+![alt text](http://zsy.fi/static/zsy-numpad.png)
+
