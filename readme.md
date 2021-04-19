@@ -9,9 +9,9 @@ check keyboards/ergodox-ez/keymaps/zsy-colemak/keymap.c
 ### Base Layer
 ![alt text](http://zsy.fi/static/zsy-base.png)
 
-- ![#f03c15] Movement Layer
+### `#f03c15` Movement Layer
 ![alt text](http://zsy.fi/static/zsy-movement.png)
 
-- ![#f03c15] Numpad Layer
+### `#f03c15` Numpad Layer
 ![alt text](http://zsy.fi/static/zsy-numpad.png)
 
